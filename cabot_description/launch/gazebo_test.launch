@@ -27,7 +27,7 @@
   <arg name="y" default="0"/>
   <arg name="z" default="0.1"/>
   <param name="robot_description" command="rosrun xacro xacro --inorder 
-              '$(find cabot_description)/robots/$(arg model)_zed_hokuyo.urdf.xacro'" />
+              '$(find cabot_description)/robots/$(arg model).urdf.xacro'" />
   <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
   <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model rosbots -x $(arg x) -y $(arg y) -z $(arg z)" />
 </launch>
