@@ -81,7 +81,7 @@ SOFTWARE.
   <link name="rs3_link">
   </link>
   <joint name="rs3_base" type="fixed">
-      <origin xyz="0.12843 0.083154 ${0.517285-0.038}" rpy="3.1415926535 0 ${70.0/180.0*3.1415926535}"/>
+      <origin xyz="0.12843 0.083154 ${0.517285-0.038}" rpy="0 0 ${70.0/180.0*3.1415926535}"/>
       <parent link="base_link"/>
       <child link="rs3_link"/>
   </joint>
@@ -113,20 +113,20 @@ SOFTWARE.
     </xacro:VLP-16>
   </xacro:if>
 
-  <!-- RealSense D435 -->
+  <!-- RealSense D455 -->
   <xacro:if value="${camera_type=='realsense'}">
     <xacro:sensor_d455 parent="rs1_link" name="d455_rs1" topics_ns="rs1">
       <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:sensor_d455>
   </xacro:if>
   <xacro:if value="${camera_type=='realsense'}">
-    <xacro:sensor_d435 parent="rs2_link" name="d435_rs2" topics_ns="rs2">
+    <xacro:sensor_d455 parent="rs2_link" name="d455_rs2" topics_ns="rs2">
       <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:sensor_d435>
+    </xacro:sensor_d455>
   </xacro:if>
   <xacro:if value="${camera_type=='realsense'}">
-    <xacro:sensor_d435 parent="rs3_link" name="d435_rs3" topics_ns="rs3">
+    <xacro:sensor_d455 parent="rs3_link" name="d455_rs3" topics_ns="rs3">
       <origin xyz="0 0 0" rpy="0 0 0" />
-    </xacro:sensor_d435>
+    </xacro:sensor_d455>
   </xacro:if>
 </robot>
