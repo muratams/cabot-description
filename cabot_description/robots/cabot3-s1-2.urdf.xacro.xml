@@ -53,7 +53,7 @@ SOFTWARE.
   <link name="lidar_link">
   </link>
   <joint name="lidar_base" type="fixed">
-      <origin xyz="0.0955 -0.0025 ${0.522-0.038}" rpy="0 0 0"/> <!-- lidar mount position -->
+      <origin xyz="0.10 0.0 ${0.522-0.038}" rpy="0 0 1.57"/> <!-- lidar mount position -->
       <parent link="base_link"/>
       <child link="lidar_link"/>
   </joint>
@@ -67,7 +67,7 @@ SOFTWARE.
   <link name="rs1_link">
   </link>
   <joint name="rs1_base" type="fixed">
-      <origin xyz="0.1657 -0.0025 ${0.490285-0.038}" rpy="0 0 0"/>
+      <origin xyz="0.1657 -0.0025 ${0.490285-0.038}" rpy="3.1415926535 0 0"/>
       <parent link="base_link"/>
       <child link="rs1_link"/>
   </joint>
@@ -81,7 +81,7 @@ SOFTWARE.
   <link name="rs3_link">
   </link>
   <joint name="rs3_base" type="fixed">
-      <origin xyz="0.12843 0.083154 ${0.517285-0.038}" rpy="0 0 ${70.0/180.0*3.1415926535}"/>
+      <origin xyz="0.12843 0.083154 ${0.517285-0.038}" rpy="3.1415926535 0 ${70.0/180.0*3.1415926535}"/>
       <parent link="base_link"/>
       <child link="rs3_link"/>
   </joint>

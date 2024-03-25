@@ -166,7 +166,7 @@ THE SOFTWARE.
     </joint>
 
     <joint name="control_center_joint" type="fixed">
-      <origin xyz="0.153 0 ${WHEEL_RADIUS}" rpy="0 0 0" />
+      <origin xyz="0.10 0 ${WHEEL_RADIUS}" rpy="0 0 0" />
       <parent link="base_control_shift"/>
       <child link="base_link" />
     </joint>
