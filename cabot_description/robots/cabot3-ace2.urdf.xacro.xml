@@ -36,6 +36,9 @@ SOFTWARE.
   <xacro:arg name="camera_type" default="realsense" />
   <xacro:property name="camera_type" value="$(arg camera_type)" />
 
+  <!-- imu rotation adjust -->
+  <xacro:arg name="imu_adjust_rpy" default="0 0 0" />
+
   <!-- include xacro macros -->
   <xacro:include filename="$(find cabot_description)/urdf/cabot3-ace2_description.urdf.xml" />
   <xacro:include filename="$(find cabot_description)/urdf/sensors/hokuyo_ust_20lx.urdf.xacro.xml"/>
@@ -88,6 +91,14 @@ SOFTWARE.
 
   <!-- IMU sensor description-->
   <xacro:imu_macro prefix="cabot/imu" frame="imu_frame"/>
+
+  <link name="imu_adjusted">
+  </link>
+  <joint name="imu_adjusted_link" type="fixed">
+      <origin xyz="0 0 0" rpy="$(arg imu_adjust_rpy)"/>
+      <parent link="imu_frame"/>
+      <child link="imu_adjusted"/>
+  </joint>
 
   <!-- Hokuyo UST 20LX -->
   <xacro:unless value="$(arg use_velodyne)">
