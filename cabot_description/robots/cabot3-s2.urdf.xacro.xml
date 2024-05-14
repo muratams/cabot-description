@@ -43,7 +43,6 @@ SOFTWARE.
   <xacro:include filename="$(find cabot_description)/urdf/sensors/imu_sensor.urdf.xacro.xml"/>
   <xacro:include filename="$(find cabot_description)/urdf/sensors/_d435.urdf.xacro.xml"/>
   <xacro:include filename="$(find cabot_description)/urdf/sensors/_d455.urdf.xacro.xml"/>
-  <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid70.xacro" />
 
   <!-- content -->
 
@@ -132,7 +131,10 @@ SOFTWARE.
   </xacro:if>
 
   <!-- Livox Mid-70 -->
-  <xacro:mid70 parent="livox_link" name="livox" topic="mid70">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:mid70>
+  <xacro:if value="$(arg sim)">
+    <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid70.xacro" />
+    <xacro:mid70 parent="livox_link" name="livox" topic="/livox/lidar">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:mid70>
+  </xacro:if>
 </robot>
