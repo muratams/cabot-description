@@ -37,7 +37,7 @@ SOFTWARE.
   <xacro:property name="camera_type" value="$(arg camera_type)" />
 
   <!-- include xacro macros -->
-  <xacro:include filename="$(find cabot_description)/urdf/cabot3-s2_description.urdf.xml" />
+  <xacro:include filename="$(find cabot_description)/urdf/cabot3-i1_description.urdf.xml" />
   <xacro:include filename="$(find cabot_description)/urdf/sensors/hokuyo_ust_20lx.urdf.xacro.xml"/>
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
   <xacro:include filename="$(find cabot_description)/urdf/sensors/imu_sensor.urdf.xacro.xml"/>
