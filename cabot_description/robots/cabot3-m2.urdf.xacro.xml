@@ -59,21 +59,21 @@ SOFTWARE.
   <link name="rs1_link">
   </link>
   <joint name="rs1_base" type="fixed">
-      <origin xyz="0.1657 -0.0025 ${0.490285-0.038}" rpy="3.1415926535 0 0"/>
+      <origin xyz="0.1596 0 0.403" rpy="0 0 0"/>
       <parent link="base_link"/>
       <child link="rs1_link"/>
   </joint>
   <link name="rs2_link">
   </link>
   <joint name="rs2_base" type="fixed">
-      <origin xyz="0.12843 -0.08815 ${0.49285-0.038}" rpy="0 0 ${-70.0/180.0*3.1415926535}"/>
+      <origin xyz="0.059 -0.0972 0.398" rpy="0 0 ${-93.0/180.0*3.1415926535}"/>
       <parent link="base_link"/>
       <child link="rs2_link"/>
   </joint>
   <link name="rs3_link">
   </link>
   <joint name="rs3_base" type="fixed">
-      <origin xyz="0.12843 0.083154 ${0.517285-0.038}" rpy="3.1415926535 0 ${70.0/180.0*3.1415926535}"/>
+      <origin xyz="0.059 0.0972 0.398" rpy="0 0 ${93.0/180.0*3.1415926535}"/>
       <parent link="base_link"/>
       <child link="rs3_link"/>
   </joint>
