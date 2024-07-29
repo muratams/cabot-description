@@ -80,9 +80,16 @@ SOFTWARE.
   <link name="livox_link">
   </link>
   <joint name="livox_base" type="fixed">
-      <origin xyz="0.10 0 ${0.100-0.038}" rpy="3.1415926535 0 0"/>
+      <origin xyz="0.15 0 ${0.130-0.038}" rpy="3.1415926535 0 0"/>
       <parent link="base_link"/>
       <child link="livox_link"/>
+  </joint>
+  <link name="livox_footprint">
+  </link>
+  <joint name="livox_footprint_joint" type="fixed">
+      <origin xyz="0.15 0 -0.038" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="livox_footprint"/>
   </joint>
 
   <!-- IMU sensor description-->
